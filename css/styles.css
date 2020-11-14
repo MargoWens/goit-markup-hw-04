@@ -1,0 +1,527 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/raleway-v18-latin_cyrillic-regular.eot");
+  src: local(""),
+    url("../fonts/raleway-v18-latin_cyrillic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/raleway-v18-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/raleway-v18-latin_cyrillic-regular.woff") format("woff"),
+    url("../fonts/raleway-v18-latin_cyrillic-regular.ttf") format("truetype"),
+    url("../fonts/raleway-v18-latin_cyrillic-regular.svg#Raleway") format("svg");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/raleway-v18-latin_cyrillic-700.eot");
+  src: local(""),
+    url("../fonts/raleway-v18-latin_cyrillic-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/raleway-v18-latin_cyrillic/raleway-v18-latin_cyrillic-700.woff2")
+      format("woff2"),
+    url("../fonts/raleway-v18-latin_cyrillic/raleway-v18-latin_cyrillic-700.woff")
+      format("woff"),
+    url("../fonts/raleway-v18-latin_cyrillic/raleway-v18-latin_cyrillic-700.ttf")
+      format("truetype"),
+    url("../fonts/raleway-v18-latin_cyrillic/raleway-v18-latin_cyrillic-700.svg")
+      format("svg");
+}
+
+/* цвет основного текста #757575 
+цвет заголовков #212121 
+акцентный цвет #2196F3 
+белый #FFFFFF 
+прозрачный для контактов футер rgba(255, 255, 255, 0.6) 
+фон героя и футера #2F303A 
+фон о компании #E5E5E5 
+фон наша команда #F5F4FA
+цвет рамки карточек Портфолио #eeeeee
+*/
+
+:root {
+  --text-cl: #757575;
+  --accent-cl: #2196f3;
+  --black: #212121;
+  --white: #ffffff;
+  --gray: rgba(255, 255, 255, 0.6);
+  --dark-bg: #2f303a;
+  --white-bg: #e5e5e5;
+  --grey-bg: #f5f4fa;
+  --light-gray-card: #eeeeee;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--text-cl);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Геометрия всего контента на странице */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
+/* Убрали маркеры и отступы у списков*/
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Логотип и его геометрия */
+
+.nav-flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.header-bg .logo {
+  margin-right: 93px;
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.192;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.logo-cl {
+  color: var(--accent-cl);
+}
+
+/* Белый лого на темном фоне */
+
+.logo-white {
+  color: var(--white);
+}
+
+/* Геометрия шапки */
+
+.header-flexbox {
+  display: flex;
+  align-items: center;
+}
+
+/* Флексы навигации + крайняя геометрия*/
+
+.menu-flexbox {
+  display: flex;
+}
+
+.menu-flexbox .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Шапка. Cсылки в навигации */
+
+.link {
+  font-weight: 500;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/* Активная страница */
+.current {
+  color: var(--accent-cl);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-cl);
+}
+
+/* Шапка. Геометрия контактов */
+
+.address-flexbox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contacts-flexbox {
+  display: flex;
+}
+
+.contacts-flexbox .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Шапка. Cсылки адрес */
+
+.link-top-address {
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: var(--text-cl);
+  text-decoration: none;
+}
+
+.link-top-address:hover,
+.link-top-address:focus {
+  color: var(--accent-cl);
+}
+
+/* Фон шапки и геометрия*/
+
+.header-bg {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  background-color: var(--white);
+}
+
+/* СТИЛИ СТРАНИЦЫ INDEX.HTML */
+
+/* Герой */
+
+.hero-title {
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 630px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* Кнопка героя */
+
+.hero-link {
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--accent-cl);
+  text-decoration: none;
+}
+
+/* Фон героя и геометрия */
+
+.hero-bg {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--dark-bg);
+}
+
+/* Заг героя по центру */
+
+.title-center {
+  text-align: center;
+}
+
+/* Заги секций */
+
+.section-title {
+  margin: 0px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  color: var(--black);
+}
+
+/* Заги блока преимуществ */
+
+.feature-title {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/* Геометрия абзацев блока преимуществ */
+
+.list p {
+  margin: 0px;
+}
+
+/* О компании */
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* Фон о компании и геометрия */
+
+.feature-bg {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--white);
+}
+
+.feature-flexbox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.feature-flexbox .item {
+  width: 270px;
+}
+
+.feature-flexbox .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Галерея. Геометрия */
+
+.gallery-list-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-bg {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--white);
+}
+
+/* Команда*/
+
+/* Фон команды и геометрия */
+.team-bg {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--grey-bg);
+}
+
+.team-list-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list-flex .item {
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white);
+}
+
+.team-list-flex .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* Отступы и общие стили текста командных карточках */
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.187;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Команда. Стили */
+
+.team-title {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* Фон подвала и геометрия */
+.footer-bg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--dark-bg);
+}
+
+.footer-flexbox-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-list-contact .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* Стили подвала */
+
+.link-footer-address {
+  color: var(--white);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.link-footer-address:hover,
+.link-footer-address:focus {
+  color: var(--accent-cl);
+}
+
+.link-footer-contacts {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.link-footer-contacts:hover,
+.link-footer-contacts:focus {
+  color: var(--accent-cl);
+}
+
+/* СТИЛИ ДЛЯ PORTFOLIO.HTML*/
+
+/* Фон маин-контента и геометрия */
+
+.portfolio-bg {
+  background-color: var(--white);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Геометрия кнопок фильтра */
+
+.filter-list-flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.filter-list-flexbox .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Убираем стиль ссылок */
+
+.link-style {
+  text-decoration: none;
+}
+
+/* Кнопки */
+
+.btn {
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  background-color: var(--grey-bg);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--white);
+  background-color: var(--accent-cl);
+  border-color: var(--accent-cl);
+  cursor: pointer;
+}
+
+/* Первые буквы в кнопках заглавные */
+
+.btn::first-letter {
+  text-transform: capitalize;
+}
+
+/* Геометрия карточек */
+
+.card-list-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.card-list-flexbox .item {
+  flex-basis: calc(100% / 3 - 30px);
+  max-width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid var(--light-gray-card);
+}
+
+.card-list-flexbox .item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.card-list-flexbox .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+/* Отступы для загов и описания в карточках  */
+
+.card-text {
+  padding: 20px 24px;
+  word-wrap: break-word;
+}
+
+/* Заги карточек */
+
+.card-title {
+  margin: 0px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--black);
+}
+
+/* Подпись раздела в карточке */
+
+.discription-text {
+  line-height: 1.875;
+  text-align: left;
+  color: var(--text-cl);
+}
